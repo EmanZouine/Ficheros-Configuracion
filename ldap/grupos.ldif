@@ -1,0 +1,13 @@
+dn: cn=mujer,ou=grupos,dc=mydomain,dc=local
+objectClass: posixGroup
+objectClass: top
+cn: mujer
+gidNumber: 1501
+memberUid: marta,maria
+
+dn: cn=hombre,ou=grupos,dc=mydomain,dc=local
+objectClass: posixGroup
+objectClass: top
+cn: hombre
+gidNumber: 1502
+memberUid: pablo

@@ -1,0 +1,9 @@
+dn: ou=usuarios,dc=mydomain,dc=local
+objectClass: organizationalUnit
+objectClass: top
+ou: usuarios
+
+dn: ou=grupos,dc=mydomain,dc=local
+objectClass: organizationalUnit
+objectClass: top
+ou: grupos

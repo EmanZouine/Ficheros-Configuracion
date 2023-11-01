@@ -1,0 +1,44 @@
+dn: cn=marta,ou=usuarios,dc=mydomain,dc=local
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: top
+cn: marta
+uidNumber: 1101
+uid: marta
+gidNumber: 1501
+homeDirectory: /home/marta
+loginShell: /bin/bash
+sn: Garcia Lopez
+givenName: Marta
+
+dn: cn=maria,ou=usuarios,dc=mydomain,dc=local
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: top
+cn: maria
+uidNumber: 1101
+uid: maria
+gidNumber: 1501
+homeDirectory: /home/maria
+loginShell: /bin/bash
+sn: Garcia Lopez
+givenName: Maria
+
+dn: cn=Pablo,ou=usuarios,dc=mydomain,dc=local
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: top
+cn: pablo
+uidNumber: 1101
+uid: pablo
+gidNumber: 1502
+homeDirectory: /home/pablo
+loginShell: /bin/bash
+sn: Garcia Lopez
+givenName: Pablo
