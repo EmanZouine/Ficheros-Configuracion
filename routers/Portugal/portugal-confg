@@ -1,0 +1,160 @@
+
+!
+upgrade fpd auto
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Portugal
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable password usuario
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name ftp1.com
+ip cef
+ipv6 unicast-routing
+ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+username usuario privilege 15 secret 5 $1$H9fI$5ZpU1HA9Fb44fjs.K9U32/
+username usuarioftp password 0 usuarioftp
+username eman password 0 eman
+!
+redundancy
+!
+!
+ip tcp synwait-time 5
+ip ssh version 2
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 13.4.224.1 255.255.255.252
+ duplex half
+ ipv6 address 2014:5:9:10::1/64
+ ipv6 ospf 10 area 10.10.10.10
+!
+interface FastEthernet1/0
+ ip address 13.4.224.5 255.255.255.252
+ duplex auto
+ speed auto
+ ipv6 address 2014:5:9:11::1/64
+ ipv6 ospf 10 area 10.10.10.10
+!
+interface FastEthernet1/1
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface FastEthernet2/1
+ ip address 13.4.31.254 255.255.224.0
+ duplex auto
+ speed auto
+ ipv6 address 2014:5:9:1::1/64
+ ipv6 ospf 10 area 10.10.10.10
+!
+interface Serial3/0
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial3/1
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial3/2
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial3/3
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+router ospf 10
+ router-id 13.4.31.254
+ passive-interface FastEthernet2/1
+ network 13.4.0.0 0.0.31.255 area 10.10.10.10
+ network 13.4.224.0 0.0.0.3 area 10.10.10.10
+ network 13.4.224.4 0.0.0.3 area 10.10.10.10
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+!
+!
+!
+no cdp log mismatch duplex
+ipv6 router ospf 10
+ router-id 13.4.31.254
+ passive-interface FastEthernet2/1
+!
+!
+!
+!
+control-plane
+!
+!
+!
+mgcp profile default
+!
+!
+!
+gatekeeper
+ shutdown
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end
