@@ -1,0 +1,22 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+include "/etc/bind/zones.rfc1918";
+
+zone "eman.com" {
+	type master;
+	file "db.eman.com";
+};
+
+zone "4.13.in-addr.arpa" {
+	type master;
+	file "db.128.4.13";
+};
+
+zone "5.0.0.0.9.0.0.0.5.0.0.0.4.1.0.2.ip6.arpa" {
+	type master;
+	file "db.5.0.0.0.9.0.0.0.5.0.0.0.4.1.0.2";
+};

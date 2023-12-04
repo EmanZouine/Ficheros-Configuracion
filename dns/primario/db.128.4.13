@@ -1,0 +1,14 @@
+$TTL	86400
+@	IN	SOA	eman.com. root.eman.com. (
+			20120401	; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			  86400 )	; Negative Cache TTL
+;
+eman.com.	IN	A	13.4.128.2
+@	IN	NS	eman.com.
+
+$ORIGIN	4.13.in-addr.arpa.
+2.128	IN	PTR	eman.com.
+2.128	IN	PTR	zouine.eman.com.
