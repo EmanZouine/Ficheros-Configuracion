@@ -1,0 +1,21 @@
+$ORIGIN .
+$TTL 86400	; 1 day
+4.13.in-addr.arpa	IN SOA	eman.com. root.eman.com. (
+				20120405   ; serial
+				604800     ; refresh (1 week)
+				86400      ; retry (1 day)
+				2419200    ; expire (4 weeks)
+				86400      ; minimum (1 day)
+				)
+			NS	eman.com.
+$ORIGIN 4.13.in-addr.arpa.
+$TTL 300	; 5 minutes
+11.0			PTR	PC11.eman.com.
+$ORIGIN 128.4.13.in-addr.arpa.
+11			PTR	PC5.eman.com.
+$TTL 86400	; 1 day
+2			PTR	zouine.eman.com.
+$ORIGIN 4.13.in-addr.arpa.
+$TTL 300	; 5 minutes
+11.64			PTR	PC3.eman.com.
+10.96			PTR	PC6.eman.com.
