@@ -1,0 +1,33 @@
+$ORIGIN .
+$TTL 86400	; 1 day
+4.13.in-addr.arpa	IN SOA	eman.com. root.eman.com. (
+				20120457   ; serial
+				604800     ; refresh (1 week)
+				86400      ; retry (1 day)
+				2419200    ; expire (4 weeks)
+				86400      ; minimum (1 day)
+				)
+			NS	eman.com.
+$ORIGIN 4.13.in-addr.arpa.
+$TTL 300	; 5 minutes
+11.0			PTR	PC11.eman.com.
+$ORIGIN 112.4.13.in-addr.arpa.
+4			PTR	PC4.eman.com.
+6			PTR	PC4.eman.com.
+$ORIGIN 4.13.in-addr.arpa.
+$TTL 86400	; 1 day
+2.128			PTR	dns.eman.com.
+$ORIGIN 158.4.13.in-addr.arpa.
+$TTL 300	; 5 minutes
+136			PTR	PC5.eman.com.
+137			PTR	PC5.eman.com.
+148			PTR	PC5.eman.com.
+$ORIGIN 4.13.in-addr.arpa.
+2.16			PTR	PC11.eman.com.
+$ORIGIN 191.4.13.in-addr.arpa.
+237			PTR	PC6.eman.com.
+249			PTR	PC6.eman.com.
+$ORIGIN 4.13.in-addr.arpa.
+13.64			PTR	PC3.eman.com.
+4.80			PTR	PC3.eman.com.
+11.96			PTR	PC6.eman.com.
